@@ -1,0 +1,99 @@
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./global.css">
+  <title>Email Confirmation</title>
+</head>
+
+<body>
+  <div id="container">
+    <div id="main">
+      <div id="banner"></div>
+      <div id="video">
+    </div>
+      <div id="info">
+        <div class="big_title">Email Confirmation</div>
+        <p>Hey Sara! you're almost ready to start using AMPED. Simple click the button below to verify your email address.</p>
+      </div>
+      <div id="verify">
+        <a href="#">Verify Your Email</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-animation">
+    <div class="circle" id="blur"></div>
+    <div class="circle2" id="blur2"></div>
+</div>
+
+  <!-- Adding GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+
+<!-- Adding jQuery  -->
+<script crossorigin="anonymous"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+<!-- Adding jQuery Background Video-->
+<script src="./scripts/bg-video/jquery.background-video.js"></script>
+
+<script>
+    // Adding Gradient Scroll Effect
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set('#blur', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur'
+    });
+
+    gsap.set('#blur2', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur2', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur2'
+    });
+
+    gsap.set('#blur3', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur3', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur3'
+    });
+
+    gsap.set('#blur4', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight
+    })
+    gsap.to('#blur4', {
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        duration: 7,
+        ease: 'back',
+        scrollTrigger: '#blur4'
+    });
+</script>
+
+<!-- Adding JS -->
+<script src="./scripts/app.js"></script>
+</body>
+
+</html>
